@@ -1,0 +1,51 @@
+public class MainListaDinamica {
+    public static void main(String[] args) {
+        ListaDinamica listaDinamica = new ListaDinamica();
+        listaDinamica.adicionarElemento("Arroz");
+        listaDinamica.adicionarElemento("Feijão");
+        listaDinamica.adicionarElemento("Batata");
+        listaDinamica.adicionarElemento("Feijão");
+        listaDinamica.adicionarElemento("Arroz");
+        listaDinamica.adicionarElemento("Feijão");
+        listaDinamica.removerTodas("Arroz");
+        listaDinamica.exibirElementos();
+        listaDinamica.contar();
+        System.out.println("=============================");
+        
+
+
+        listaDinamica.adicionarVarios(new String[]{"Farinha", "Tomate"});
+        listaDinamica.exibirElementos();
+        System.out.println("=============================");
+
+
+        listaDinamica.obter(4);
+        System.out.println("=============================");
+        listaDinamica.obter(8);
+        System.out.println("=============================");
+
+
+        listaDinamica.inserir(2, "Cebola");
+        listaDinamica.exibirElementos();
+        System.out.println("=============================");
+
+
+        listaDinamica.removerPorIndice(5);
+        listaDinamica.exibirElementos();
+        System.out.println("=============================");
+
+
+        listaDinamica.ultimoIndiceDe("Feijão");
+        listaDinamica.contarOcorrencias("Feijão");
+        System.out.println("=============================");
+
+
+        listaDinamica.substituir("Feijão", "Macarrão");
+        listaDinamica.exibirElementos();
+        System.out.println("=============================");
+
+
+        listaDinamica.limpar();
+        listaDinamica.exibirElementos();
+    }
+}
