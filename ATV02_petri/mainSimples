@@ -1,0 +1,16 @@
+public class MainSimples {
+    public static void main(String[] args) {
+        PilhaSimples p = new PilhaSimples(5);
+
+        p.push("A");
+        p.push("B");
+        p.push("C");
+
+        p.exibir();
+
+        p.pop();
+        p.exibir();
+
+        System.out.println("Topo: " + p.peek());
+    }
+}

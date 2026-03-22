@@ -1,0 +1,80 @@
+public class PilhaDinamica {
+    private No topo;
+
+    public PilhaDinamica() {
+        this.topo = null;
+        System.out.println("Pilha Dinâmica criada!");
+    }
+
+    public boolean estaVazia() {
+        return topo == null;
+    }
+
+    public void push(String elemento) {
+        No novo = new No(elemento);
+        novo.setProx(topo);
+        topo = novo;
+        System.out.println("Elemento " + elemento + " empilhado!");
+    }
+
+    public String pop() {
+        if (!estaVazia()) {
+            String removido = topo.getConteudo();
+            topo = topo.getProx();
+            System.out.println("Elemento " + removido + " removido!");
+            return removido;
+        } else {
+            System.out.println("Pilha vazia!");
+            return null;
+        }
+    }
+
+    public String peek() {
+        if (!estaVazia()) {
+            return topo.getConteudo();
+        } else {
+            System.out.println("Pilha vazia!");
+            return null;
+        }
+    }
+
+    public void exibir() {
+        if (!estaVazia()) {
+            No aux = topo;
+            int i = 0;
+            while (aux != null) {
+                System.out.println("[" + i + "] = " + aux.getConteudo());
+                aux = aux.getProx();
+                i++;
+            }
+        } else {
+            System.out.println("Pilha vazia!");
+        }
+    }
+
+    public int contar() {
+        int contador = 0;
+        No aux = topo;
+        while (aux != null) {
+            contador++;
+            aux = aux.getProx();
+        }
+        return contador;
+    }
+
+    public void limpar() {
+        topo = null;
+        System.out.println("Pilha limpa!");
+    }
+
+    public boolean contem(String elemento) {
+        No aux = topo;
+        while (aux != null) {
+            if (aux.getConteudo().equals(elemento)) {
+                return true;
+            }
+            aux = aux.getProx();
+        }
+        return false;
+    }
+}

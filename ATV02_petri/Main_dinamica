@@ -1,0 +1,16 @@
+public class MainDinamica {
+    public static void main(String[] args) {
+        PilhaDinamica p = new PilhaDinamica();
+
+        p.push("A");
+        p.push("B");
+        p.push("C");
+
+        p.exibir();
+
+        p.pop();
+        p.exibir();
+
+        System.out.println("Topo: " + p.peek());
+    }
+}
