@@ -1,16 +1,21 @@
+package pilha;
+
 public class MainDinamica {
     public static void main(String[] args) {
-        PilhaDinamica p = new PilhaDinamica();
+        PilhaDinamicaImplementada pilhaDinamica = new PilhaDinamicaImplementada();
+        pilhaDinamica.exibirElementos();
 
-        p.push("A");
-        p.push("B");
-        p.push("C");
+        pilhaDinamica.Empilhar("Café");
+        pilhaDinamica.Empilhar("Pão");
+        pilhaDinamica.Empilhar("Macarrão");
+        pilhaDinamica.exibirElementos();
+        System.out.println("--------------");
 
-        p.exibir();
+        pilhaDinamica.Empilhar("Batata");
+        pilhaDinamica.exibirElementos();
+        System.out.println("-------------");
 
-        p.pop();
-        p.exibir();
-
-        System.out.println("Topo: " + p.peek());
+        pilhaDinamica.Desempilhar();
+        pilhaDinamica.exibirElementos();
     }
 }
