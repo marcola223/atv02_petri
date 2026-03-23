@@ -1,16 +1,33 @@
+package pilha;
+
 public class MainSimples {
     public static void main(String[] args) {
-        PilhaSimples p = new PilhaSimples(5);
+        PilhaSimples pilhaSimples = new PilhaSimples(3);
+        pilhaSimples.exibirElementos();
 
-        p.push("A");
-        p.push("B");
-        p.push("C");
+        pilhaSimples.Empilhar("Café");
+        pilhaSimples.Empilhar("Pão");
+        pilhaSimples.Empilhar("Macarrão");
+        pilhaSimples.exibirElementos();
+        System.out.println("-------------------");
 
-        p.exibir();
+        pilhaSimples.Empilhar("Batata");
+        pilhaSimples.exibirElementos();
+        System.out.println("-------------------");
 
-        p.pop();
-        p.exibir();
+        pilhaSimples.Desempilhar();
+        pilhaSimples.exibirElementos();
+        System.out.println("-------------------");
 
-        System.out.println("Topo: " + p.peek());
+        pilhaSimples.Desempilhar();
+        pilhaSimples.exibirElementos();
+        System.out.println("-------------------");
+
+        pilhaSimples.Desempilhar();
+        pilhaSimples.exibirElementos();
+        System.out.println("-------------------");
+
+        pilhaSimples.Desempilhar();
+        pilhaSimples.exibirElementos();
     }
 }
